@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="gmunozS2a.Vistas.vCalificaiones"
+             Title="Calificaiones">
+    <VerticalStackLayout>
+        <Label 
+            Text="Calificaiones UISREAEL"
+            FontSize="24"
+            TextColor="Blue"
+            VerticalOptions="Center" 
+            HorizontalOptions="Center" />
+
+        <Border Stroke="black">
+            <Picker x:Name="pkEstudiantes" Title="Estudiantes">
+                <Picker.Items>
+                    <x:String>Geovanny Muñoz</x:String>
+                    <x:String>Damian Andrare</x:String>
+                    <x:String>Ronnie Escolar</x:String>
+                    <x:String>Vinicio Guachamin</x:String>
+                    <x:String>Stalin Sarango</x:String>
+                </Picker.Items>
+            </Picker>
+        </Border>
+        
+        <Label Text="Parcial 1"
+               FontSize="15"
+               TextColor="red"
+            />
+        
+        <Entry x:Name="txtNota1"
+                Placeholder="Ingrese nota 1"
+                Keyboard="Numeric"
+                TextChanged="txtNota1_TextChanged"
+            />
+        <Entry x:Name="txtExamen1"
+                Placeholder="Ingrese nota examen"
+                Keyboard="Numeric"
+            />
+
+        <Label x:Name="lblNotaParcial1"
+               TextColor="red"
+               FontSize="18"
+               Text=""
+            />
+
+        <Label Text="Parcial 2"
+           FontSize="15"
+           TextColor="red"
+        />
+
+        <Entry x:Name="txtNota2"
+            Placeholder="Ingrese nota 2"
+            Keyboard="Numeric"
+        />
+        <Entry x:Name="txtExamen2"
+            Placeholder="Ingrese nota examen"
+            Keyboard="Numeric"
+        />
+
+        <Label x:Name="lblNotaParcial2"
+            TextColor="red"
+            FontSize="18"
+            Text=""
+        />
+
+        <DatePicker x:Name="dpFecha"
+            Format="MM/dd/yyyy"
+        />
+        
+        <Button x:Name="btnClacular" 
+                Text="Calcular notas" 
+                Clicked="btnClacular_Clicked"
+                />
+
+    </VerticalStackLayout>
+</ContentPage>
